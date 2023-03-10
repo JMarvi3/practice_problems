@@ -51,16 +51,3 @@ max_chain_set
 print("Words with that chain:",
       [word for word in scrabble_words if set(word).intersection(max_chain_set) == max_chain_set])
 print(f"Time taken: {time.perf_counter() - start}s")
-
-# alphabet_sets = set(map(frozenset, scrabble_words))
-# print(len(alphabet_sets), len(scrabble_words))
-#
-# max_chain = ''
-# for left in range(len(alphabet)):
-#     for right in range(left+1, len(alphabet)):
-#         chain = frozenset(alphabet[left:right+1])
-#         if chain in alphabet_sets and len(chain) > len(max_chain):
-#             max_chain = alphabet[left:right+1]
-# print(max_chain)
-# print(frozenset('ABCDEF') in alphabet_sets)
-
